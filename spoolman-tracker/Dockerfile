@@ -1,4 +1,4 @@
-FROM ghcr.io/nozzle-1/spoolman-tracker:0.3.1
+FROM ghcr.io/nozzle-1/spoolman-tracker:0.4.0
 COPY rootfs /
 
 CMD ["node", "/usr/local/bin/addon-entrypoint.mjs"]
