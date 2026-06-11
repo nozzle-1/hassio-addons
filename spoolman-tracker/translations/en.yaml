@@ -1,0 +1,25 @@
+configuration:
+  logging_level:
+    name: Logging level
+    description: Verbosity used by the tracker service.
+  spoolman_base_url:
+    name: Spoolman API URL
+    description: Base URL of the Spoolman API, usually ending with /api/v1.
+  spoolman_api_key:
+    name: Spoolman API key
+    description: Optional API key sent to Spoolman.
+  spoolman_timeout_ms:
+    name: Spoolman timeout
+    description: HTTP timeout in milliseconds for requests to Spoolman.
+  supervision_probe_interval_ms:
+    name: Probe interval
+    description: Delay in milliseconds between printer reachability probes.
+  supervision_offline_backoff_ms:
+    name: Offline backoff
+    description: Delay in milliseconds before retrying an offline printer.
+  supervision_connect_timeout_ms:
+    name: Probe timeout
+    description: TCP connection timeout in milliseconds for reachability checks.
+  printers:
+    name: Printers
+    description: List of printers monitored by the add-on.

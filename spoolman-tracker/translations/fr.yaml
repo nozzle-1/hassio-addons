@@ -1,0 +1,25 @@
+configuration:
+  logging_level:
+    name: Niveau de logs
+    description: Niveau de verbosite utilise par le service.
+  spoolman_base_url:
+    name: URL API Spoolman
+    description: URL de base de l'API Spoolman, en general terminee par /api/v1.
+  spoolman_api_key:
+    name: Cle API Spoolman
+    description: Cle API optionnelle envoyee a Spoolman.
+  spoolman_timeout_ms:
+    name: Timeout Spoolman
+    description: Timeout HTTP en millisecondes pour les requetes vers Spoolman.
+  supervision_probe_interval_ms:
+    name: Intervalle de probe
+    description: Delai en millisecondes entre les tests de disponibilite de l'imprimante.
+  supervision_offline_backoff_ms:
+    name: Backoff hors ligne
+    description: Delai en millisecondes avant une nouvelle tentative sur une imprimante hors ligne.
+  supervision_connect_timeout_ms:
+    name: Timeout de probe
+    description: Timeout TCP en millisecondes pour les verifications de connectivite.
+  printers:
+    name: Imprimantes
+    description: Liste des imprimantes surveillees par l'addon.

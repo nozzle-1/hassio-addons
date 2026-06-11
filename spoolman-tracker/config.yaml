@@ -1,0 +1,50 @@
+name: Spoolman Tracker
+version: 0.1.0-1
+slug: spoolman_tracker
+description: Track supported 3D printer spool weights and push updates to Spoolman.
+url: https://github.com/nozzle-1/spoolman-tracker
+arch:
+  - amd64
+startup: services
+boot: auto
+init: false
+options:
+  logging_level: info
+  spoolman_base_url: http://spoolman:7912/api/v1
+  spoolman_api_key: ""
+  spoolman_timeout_ms: 10000
+  supervision_probe_interval_ms: 15000
+  supervision_offline_backoff_ms: 30000
+  supervision_connect_timeout_ms: 5000
+  printers:
+    - id: x1c
+      platform: bambulab
+      enabled: false
+      host: 192.168.1.50
+      serial: 01PXXXXXXXXXXXX
+      access_code: "12345678"
+      username: bblp
+      mqtt_port: 8883
+      mqtt_connect_timeout_ms: 10000
+      mqtt_reconnect_ms: 5000
+      push_all_on_connect: false
+schema:
+  logging_level: list(debug|info|warn|error)
+  spoolman_base_url: str
+  spoolman_api_key: password?
+  spoolman_timeout_ms: int
+  supervision_probe_interval_ms: int
+  supervision_offline_backoff_ms: int
+  supervision_connect_timeout_ms: int
+  printers:
+    - id: str
+      platform: list(bambulab)
+      enabled: bool
+      host: str
+      serial: str
+      access_code: password
+      username: str?
+      mqtt_port: int?
+      mqtt_connect_timeout_ms: int?
+      mqtt_reconnect_ms: int?
+      push_all_on_connect: bool?
