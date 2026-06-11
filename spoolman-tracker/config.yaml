@@ -1,5 +1,5 @@
 name: Spoolman Tracker
-version: 0.1.0-1
+version: 0.2.0-1
 slug: spoolman_tracker
 description: Track supported 3D printer spool weights and push updates to Spoolman.
 url: https://github.com/nozzle-1/spoolman-tracker
