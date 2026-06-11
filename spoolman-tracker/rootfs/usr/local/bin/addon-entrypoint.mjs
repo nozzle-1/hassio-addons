@@ -62,7 +62,11 @@ function buildConfig(options) {
 
   const spoolman = {
     baseUrl: asNonEmptyString(options.spoolman_base_url) ?? "http://spoolman:7912/api/v1",
-    timeoutMs: asNumber(options.spoolman_timeout_ms) ?? 10000
+    timeoutMs: asNumber(options.spoolman_timeout_ms) ?? 10000,
+    autoArchiveEmptySpool: {
+      enabled: asBoolean(options.spoolman_auto_archive_empty_spool_enabled, false),
+      intervalSeconds: asNumber(options.spoolman_auto_archive_empty_spool_interval_seconds) ?? 3600
+    }
   };
 
   const apiKey = asNonEmptyString(options.spoolman_api_key);

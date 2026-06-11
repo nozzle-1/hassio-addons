@@ -13,6 +13,8 @@ options:
   spoolman_base_url: http://spoolman:7912/api/v1
   spoolman_api_key: ""
   spoolman_timeout_ms: 10000
+  spoolman_auto_archive_empty_spool_enabled: false
+  spoolman_auto_archive_empty_spool_interval_seconds: 3600
   supervision_probe_interval_ms: 15000
   supervision_offline_backoff_ms: 30000
   supervision_connect_timeout_ms: 5000
@@ -33,6 +35,8 @@ schema:
   spoolman_base_url: str
   spoolman_api_key: password?
   spoolman_timeout_ms: int
+  spoolman_auto_archive_empty_spool_enabled: bool
+  spoolman_auto_archive_empty_spool_interval_seconds: int
   supervision_probe_interval_ms: int
   supervision_offline_backoff_ms: int
   supervision_connect_timeout_ms: int

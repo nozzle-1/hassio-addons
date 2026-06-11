@@ -27,6 +27,7 @@ Most settings are available directly in the add-on UI:
 - `spoolman_base_url`: Spoolman API URL, usually ending with `/api/v1`
 - `spoolman_api_key`: optional API key
 - `spoolman_timeout_ms`: Spoolman HTTP timeout
+- `spoolman_auto_archive_empty_spool_*`: automatic archival of active spools that reach `0` remaining weight
 - `supervision_*`: printer reachability probe timings
 - `printers`: printers to monitor
 
@@ -37,6 +38,8 @@ logging_level: info
 spoolman_base_url: http://spoolman.local:7912/api/v1
 spoolman_api_key: ""
 spoolman_timeout_ms: 10000
+spoolman_auto_archive_empty_spool_enabled: false
+spoolman_auto_archive_empty_spool_interval_seconds: 3600
 supervision_probe_interval_ms: 15000
 supervision_offline_backoff_ms: 30000
 supervision_connect_timeout_ms: 5000
@@ -58,4 +61,5 @@ printers:
 
 - The default printer entry is intentionally disabled so the add-on can be installed before real values are entered.
 - `access_code` is the Bambu Lab printer LAN access code.
+- When auto-archive is enabled, the service periodically archives active Spoolman spools whose `remaining_weight` is `0`.
 - This first packaging targets `amd64` because the published upstream image is currently built for that architecture.
