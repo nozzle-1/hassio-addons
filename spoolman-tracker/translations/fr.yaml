@@ -11,6 +11,12 @@ configuration:
   spoolman_timeout_ms:
     name: Timeout Spoolman
     description: Timeout HTTP en millisecondes pour les requetes vers Spoolman.
+  spoolman_auto_archive_empty_spool_enabled:
+    name: Archivage auto des bobines vides
+    description: Archive periodiquement les bobines actives dont le poids restant a atteint 0.
+  spoolman_auto_archive_empty_spool_interval_seconds:
+    name: Intervalle d'archivage auto
+    description: Delai en secondes entre les verifications automatiques des bobines vides.
   supervision_probe_interval_ms:
     name: Intervalle de probe
     description: Delai en millisecondes entre les tests de disponibilite de l'imprimante.
